@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero*/}
       <section id="inicio" className="hero-section">
         <div className="hero-bg"></div>
         <div className="hero-overlay"></div>
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="scroll-indicator"><i className="bi bi-chevron-double-down"></i></div>
       </section>
 
-      {/* Sobre Mí */}
+      {/* Sobre Mi*/}
       <section id="sobre-mi" className="about-section section-padding">
         <div className="container">
           <div className="row align-items-center g-5">
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mis Servicios (Restaurados los 4) */}
+      {/* Mis Servicios */}
       <section id="servicios" className="services-section section-padding">
         <div className="container">
           <div className="text-center mb-5 fade-in">
@@ -145,7 +145,7 @@ export default function Home() {
           <div className="row g-5">
             <div className="col-lg-5 fade-in">
               <h2 className="section-title">Ubicación & Horarios</h2>
-              <ul className="list-unstyled text-muted mb-4">
+              <ul className="list-unstyled mb-5">
                 <li><i className="bi bi-clock text-primary me-2"></i> Lun - Vie: 10:00 - 20:00</li>
                 <li><i className="bi bi-clock text-primary me-2"></i> Sábados: 09:00 - 18:00</li>
                 <li><i className="bi bi-geo-alt text-primary me-2"></i> Rio Grande, Tierra del Fuego</li>
@@ -187,15 +187,16 @@ export default function Home() {
       <footer className="footer py-5 border-top border-secondary">
         <div className="container text-center">
           <div className="row">
-            <div className="col-md-4 mb-4"><span className="footer-brand">DARUMA <span>CUTS</span> BARBER</span></div>
+            <div className="col-md-4 mb-4"><span className="footer-brand">DARUMA <span>CUTS</span></span></div>
             <div className="col-md-4 mb-4">
               <div className="social-links justify-content-center">
                 <a href="#" className="social-link"><i className="bi bi-instagram"></i></a>
                 <a href="#" className="social-link"><i className="bi bi-facebook"></i></a>
-                
+                <a href="#" className="social-link"><i className="bi bi-whatsapp"></i></a>
               </div>
+              <div className="col"><p className="small">© 2026 Darkor Tech</p></div>
             </div>
-            <div className="col-md-4"><p className="text-muted small">© 2026 Darkor Tech</p></div>
+  
           </div>
         </div>
       </footer>
