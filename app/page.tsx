@@ -41,12 +41,12 @@ export default function Home() {
 
   return (
     <main>
-      {/* Navbar con todos los enlaces solicitados */}
+      {/* Navbar con todos los enlaces */}
       <nav className={`navbar-custom fixed-top w-100 ${scrolled ? 'scrolled' : ''}`}>
         <div className="container d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
              <a className="navbar-brand me-2" href="#">DARUMA <span>CUTS</span></a>
-             <img src="/images/logoindx.png" alt="Logo" style={{ width: '40px', borderRadius: '50%' }} />
+             <img src="/images/logoindx.png" alt="Logo" style={{ width: '60px', height: '60px' }} />
           </div>
           
           <button className="d-lg-none btn text-white border-0" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -87,9 +87,9 @@ export default function Home() {
             </div>
             <div className="col-lg-6 fade-in">
               <h2 className="section-title">Sobre Mí</h2>
-              <p className="section-subtitle mb-4">Soy un barbero apasionado por el arte del corte masculino en Rio Grande.</p>
+              <p className="section-subtitle mb-4">Soy Lucas Barria creador de Daruma Cuts , un barbero apasionado por su trabajo .</p>
               <div className="about-stats">
-                <div className="stat-item"><div className="stat-number">1+</div><div className="stat-label">Años Exp.</div></div>
+                <div className="stat-item"><div className="stat-number">3+</div><div className="stat-label">Años Exp.</div></div>
                 <div className="stat-item"><div className="stat-number">50+</div><div className="stat-label">Clientes</div></div>
                 <div className="stat-item"><div className="stat-number">100%</div><div className="stat-label">Dedicación</div></div>
               </div>
@@ -146,21 +146,30 @@ export default function Home() {
             <div className="col-lg-5 fade-in">
               <h2 className="section-title">Ubicación & Horarios</h2>
               <ul className="list-unstyled mb-5">
-                <li><i className="bi bi-clock text-primary me-2"></i> Lun - Vie: 10:00 - 20:00</li>
-                <li><i className="bi bi-clock text-primary me-2"></i> Sábados: 09:00 - 18:00</li>
-                <li><i className="bi bi-geo-alt text-primary me-2"></i> Rio Grande, Tierra del Fuego</li>
+                <li><i className="bi bi-clock  me-2"></i> Lunes - Viernes: 10:00 - 20:00</li>
+                <li><i className="bi bi-clock me-2"></i> Sabados: 13:00 - 17:00</li>
+                <li><i className="bi bi-geo-alt me-2"></i> Rio Grande, Tierra del Fuego</li>
               </ul>
               <div className="map-container shadow" style={{ borderRadius: '15px', height: '300px', overflow: 'hidden', border: '1px solid var(--color-primary)' }}>
+                
+                <div className="map-container mb-4 shadow-lg" style={{ borderRadius: '15px', height: '350px', overflow: 'hidden', border: '2px solid var(--color-primary)' }}>
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9487.643323046208!2d-67.7088916!3d-53.7865217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1711411200000!5m2!1ses!2sar" 
-                  width="100%" height="100%" style={{ border: 0, filter: 'grayscale(1) invert(0.9)' }} allowFullScreen loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4716.447408563647!2d-67.7337277225235!3d-53.76770480171692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4b1617455a0ab3%3A0x83d345f55580f670!2s10%20de%20Diciembre%201266%2C%20V9240%20R%C3%ADo%20Grande%2C%20Tierra%20del%20Fuego%2C%20Argentina!5e0!3m2!1ses!2sus!4v1774898996211!5m2!1ses!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
+              </div>
+                  
               </div>
             </div>
 
             <div className="col-lg-7 fade-in">
               <div className="bg-dark p-4 rounded-4 shadow">
-                <h3 className="mb-4">Reserva tu Turno</h3>
+                <h3 className="mb-4 text-left">Reserva tu Turno</h3>
                 <form onSubmit={handleWhatsAppSubmit}>
                   <div className="row g-3">
                     <div className="col-md-6"><input name="nombre" placeholder="Nombre" className="form-control form-control-custom" required /></div>
@@ -183,20 +192,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer py-5 border-top border-secondary">
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-md-4 mb-4"><span className="footer-brand">DARUMA <span>CUTS</span></span></div>
-            <div className="col-md-4 mb-4">
-              <div className="social-links justify-content-center">
-                <a href="#" className="social-link"><i className="bi bi-instagram"></i></a>
-                <a href="#" className="social-link"><i className="bi bi-facebook"></i></a>
-                <a href="#" className="social-link"><i className="bi bi-whatsapp"></i></a>
-              </div>
-              <div className="col"><p className="small">© 2026 Darkor Tech</p></div>
+      {/* Footer*/}
+      <footer className="footer pt-5 pb-3 border-top border-secondary">
+        <div className="container">
+          {/* Fila Principal: Marca y Redes */}
+          <div className="row align-items-center mb-4">
+            
+            {/* Izquierda: Marca */}
+            <div className="col-md-6 text-center text-md-start mb-4 mb-md-0">
+              <span className="footer-brand">DARUMA <span>CUTS</span></span>
+              <p className="small text-muted mt-2 mb-0">Barbería Estilo Premium.</p>
+              <p className="small text-muted">Rio Grande, Tierra del Fuego.</p>
             </div>
-  
+
+            {/* Derecha : Redes Sociales */}
+            <div className="col-md-6" >
+              <div className="social-links d-flex justify-content-center justify-content-md-end gap-4 ">
+                <a href="https://www.instagram.com/daruma.cuts/" target="_blank" className="social-link">
+                  <i className="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/lucas.barria.161" target="_blank" className="social-link">
+                  <i className="bi bi-facebook"></i>
+                </a>
+                <a href="https://wa.me/5492964404353" target="_blank" className="social-link">
+                  <i className="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright: */}
+          <div className="copy row mt-3">
+            <div className="col-12 text-center">
+              <p className="small text-muted mb-0">
+                © 2026 <span className="text-white">Darkor Tech</span>. Todos los derechos reservados.
+              </p>
+            </div>
           </div>
         </div>
       </footer>

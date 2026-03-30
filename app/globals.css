@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #d33434ec; /* El rojo de Daruma */
-    --color-bg-dark: #0D0D0D;
-    --color-bg-card: #1A1A1A;
-    --color-text: #F5F5F5;
-    --color-text-muted: #8A8A8A;
-    --color-accent: #E8D5B5;
+    --color-primary: #b63232ec; /* El rojo de Daruma */
+    --color-bg-dark: #0c0c0c;
+    --color-bg-card: #1a1a1a;
+    --color-text: #f7f7f7;
+    --color-text-muted: #202020;
+    --color-accent: #0e0d0d;
 }
 
 * {
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 .navbar-custom {
-    background: rgba(13, 13, 13, 0.95);
+    background: rgba(12, 12, 12, 0.95);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo img {
+   
     background-color: transparent !important;
 }
 
@@ -262,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-/* Form Styling */
+
 .form-control-custom {
     background: var(--color-bg-dark);
     border: 1px solid rgba(211, 52, 52, 0.2);
@@ -280,6 +281,19 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 3px rgba(211, 52, 52, 0.1);
     outline: none;
 }
+
+footer .copy {
+    font-size: 16px;
+    color:rgb(255, 255, 255) !important;
+   
+}
+
+footer .red-social icons{
+    color: white;
+    background-color: red;
+}
+
+
 
 /* Animations */
 .fade-in {
